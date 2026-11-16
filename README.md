@@ -17,7 +17,7 @@ The later [mechanism ablation](mechanism_study/README.md) adds three single-seed
 
 ## Data provenance and scope
 
-The user explicitly requested 1-5 GPT-6 Luna workers at max reasoning. Four such workers author generator scripts for training, evaluation, challenge, and supplemental natural-meeting data. Templates plus deterministic slot substitutions produce synthetic examples. This is **not human-authored or human-validated data**, and the challenge split is not called a human test set.
+The user explicitly requested 1-5 GPT-6 Luna workers at max reasoning. Four such workers author generator scripts for training, evaluation, challenge, and supplemental natural-meeting data. Templates plus deterministic slot substitutions produce synthetic examples. There is no independently human-annotated test set, and the challenge split is not called a human test set; the data were manually spot-checked for correctness on samples.
 
 Raw generator outputs are retained. `prepare_data.py` checks reference validity, excludes exact schema/input overlaps across splits, records counts/hashes, and builds independent positive/negative witness suites before predictions. Named scenario count and distinct schema count are reported separately. A combination tag alone is not proof that a combination was unseen: actual operator-signature novelty is separately measured. Independent generators can introduce style/domain differences; this is part of the scope of held-out evaluation, not a perfectly isolated causal manipulation.
 
