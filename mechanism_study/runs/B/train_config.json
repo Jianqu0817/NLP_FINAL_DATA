@@ -1,0 +1,26 @@
+{
+  "variant": "B",
+  "activation": "identity",
+  "site": "post_block",
+  "model_manifest": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_path": "/root/gpufree-data/hf_cache/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "endpoint": "https://hf-mirror.com"
+  },
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA L40S",
+  "training_loop": "scripts/experiment.py:train",
+  "method": "adapter",
+  "width": 64,
+  "checkpoint": null,
+  "lr": 0.0001,
+  "epochs": 3,
+  "seed": 42,
+  "accum": 16,
+  "limit": 0,
+  "eval_limit": 0,
+  "eval_batch": 16,
+  "max_length": 4096,
+  "max_new_tokens": 2048
+}

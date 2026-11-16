@@ -1,0 +1,223 @@
+{
+  "mode": "eval",
+  "method": "adapter",
+  "name": "adapter_lr0.0001_seed42",
+  "checkpoint": "/root/gpufree-data/nlp_final/runs/adapter_lr0.0001_seed42/best.pt",
+  "split": "test",
+  "width": 64,
+  "lr": 0.0001,
+  "epochs": 3,
+  "seed": 42,
+  "accum": 16,
+  "limit": 0,
+  "eval_limit": 0,
+  "eval_batch": 16,
+  "max_length": 4096,
+  "max_new_tokens": 2048,
+  "few_shot": false,
+  "model_manifest": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_path": "/root/gpufree-data/hf_cache/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "endpoint": "https://hf-mirror.com"
+  },
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA L40S",
+  "system_prompt": "你负责将中文要求转换成 JSON Schema 和具体 JSON 数据。只输出一个 JSON 对象，恰好包含 schema 和 data 两个键，两者值均为对象。先输出 schema，再输出 data；不要输出解释、Markdown代码块或思考过程。\nSchema 根对象必须包含 \"$schema\": \"https://json-schema.org/draft/2020-12/schema\" 和 \"type\": \"object\"，不得省略这两个声明。字段名严格按请求给出的英文名。除明确可选或条件必填的字段外，字段默认必填；对象默认禁止额外字段。姓名、文本、电话和标识符是字符串，保留前导零。数组按输入顺序排列。明确说恰好几项时设置数组最小和最大长度为该数；具体姓名、日期、电话等实例值不自动成为 const 规则。不要添加未要求的范围、枚举或长度限制。明确要求缺失值用 null 时，字段类型必须允许 null。相对日期根据提供的参考日期和时区换算。\n支持基本类型、properties、required、additionalProperties、items、minItems/maxItems、enum、minimum/maximum、minLength/maxLength、pattern、format、if/then/else、dependentRequired、oneOf/anyOf/allOf和明确要求的const；不使用引用。条件字段必须在properties中声明，区分无条件必填和条件必填。数据必须忠实于请求并通过生成的Schema。\n普通口语会议请求未指定字段名时，固定输出 start_time（带时区的date-time字符串）、location（原文地点字符串）、participants（参会者对象数组，每项只有name和phone两个字符串字段）。这三个会议字段以及每人的name/phone均必填，所有对象禁止额外字段；participants最小最大长度均为明确的参会人数。不要自行添加会议标题等字段。",
+  "code_sha256": {
+    "pipeline.py": "384e94d454c05c5782c7816b7dbb45b31895f5cfc2a53d74b7d34c5651054cb2",
+    "pilot_queue.py": "8e5843387f5010e680ad5e8303e1dc083fda397314cbdcbbec829bf99aaa0e14",
+    "generate_train.py": "64f5a2e72a9877c520a02c21e471a003623f29e52d27e2ffd610a82e10bba9b2",
+    "generate_eval.py": "f0ecdd1dc1ff9036b282a63be3d7ceeb112b8ef8c7425fc375a6078be7cb7649",
+    "remote.py": "dd53211dcf9d5c734daebbc8cab8da3e65ff18d38255c3e9fc94ea4b1bd9541d",
+    "experiment.py": "73a1279cb060c015981a0b9450ca25d6ccdb144afa78070e8d606a610b7895f1",
+    "generate_challenge.py": "6c7bfaa2e0b8e150f9e80f14b3fcbbe8f8fa954a5ff00a8c9b8ef2709e811c46",
+    "evaluation.py": "a22d4081a6e374616efa0d4999e73b93deb8feefd2dc0375d1f12b04f22012c1",
+    "prepare_data.py": "d3d675acd478ab1d9c94c982b285ed3db5dd4111fe3752f13234361ecbce3e44",
+    "test_evaluation.py": "1798de0b9539a6203efc07f1e0d20c173dd3ac5467f3eaa36d13aeeb7f7ae22b",
+    "generate_natural.py": "656fc4e9174a75f1030428df53f5b58fa84824d93624e80013e6b04b4051a87c",
+    "download_model.py": "91b11a40bfe649fbba65fa8848679160a43b2de9431f55d68fca64b063670849",
+    "summarize.py": "5be89149e205d85993d37038ffc19f529e0b6f703891ff07ba8f1af54e95e764",
+    "test_pilot_queue.py": "823435170cfcf8cef6fd4e9382320b20de6b0fd6e462dbb7be1357101553216d"
+  },
+  "trainable_dtypes": [
+    "torch.float32"
+  ],
+  "data_manifest": {
+    "generation": "GPT-6 Luna max, four workers; model-assisted synthetic templates",
+    "human_test_available": false,
+    "splits": {
+      "train": {
+        "n": 2300,
+        "raw_n": 2300,
+        "families": 95,
+        "unique_schemas": 166,
+        "sha256": "9d1532288c59b191f4540a709512c835bc9fafb763c5517a5a7ee309cd2b7cd6",
+        "tracks": {
+          "requirements": 2000,
+          "natural_meeting": 300
+        },
+        "unseen_operator_combination_rows": 0,
+        "rules": {
+          "pattern": 1850,
+          "enum": 1550,
+          "maxLength": 950,
+          "nested_object": 1800,
+          "format_date": 1000,
+          "array": 1200,
+          "exact_array_length": 1000,
+          "numeric_bounds": 1800,
+          "allOf": 200,
+          "nullable": 200,
+          "optional_property": 600,
+          "conditional": 200,
+          "if_then_else": 200,
+          "const": 400,
+          "format_email": 600,
+          "dependentRequired": 200,
+          "oneOf": 200,
+          "anyOf": 200,
+          "meeting_record": 300,
+          "exact_participant_count": 300,
+          "colloquial_chinese": 300,
+          "absolute_date": 100,
+          "relative_tomorrow": 100,
+          "relative_day_after_tomorrow": 100
+        }
+      },
+      "validation": {
+        "n": 339,
+        "raw_n": 340,
+        "families": 16,
+        "unique_schemas": 18,
+        "sha256": "c5ab77db4669713d6a1126d9c9697b5ddc7dd17479a601b19861f89fbc8b9712",
+        "tracks": {
+          "requirements": 299,
+          "natural_meeting": 40
+        },
+        "unseen_operator_combination_rows": 174,
+        "rules": {
+          "ordinary": 125,
+          "college": 299,
+          "enum": 174,
+          "pattern": 150,
+          "range": 250,
+          "nested": 150,
+          "array_count": 150,
+          "format": 175,
+          "combination": 174,
+          "conditional": 49,
+          "array": 25,
+          "nullable": 50,
+          "dependent_required": 50,
+          "optional": 49,
+          "meeting_record": 40,
+          "exact_participant_count": 40,
+          "colloquial_chinese": 40,
+          "absolute_date": 13,
+          "relative_tomorrow": 14,
+          "relative_day_after_tomorrow": 13
+        },
+        "witness_counts": {
+          "positive": 16074,
+          "negative": 60430
+        }
+      },
+      "test": {
+        "n": 580,
+        "raw_n": 580,
+        "families": 28,
+        "unique_schemas": 26,
+        "sha256": "c7d4f520156e56891f950d1b961de73414859717cc1942a87ea2f07414f4dea9",
+        "tracks": {
+          "requirements": 500,
+          "natural_meeting": 80
+        },
+        "unseen_operator_combination_rows": 275,
+        "rules": {
+          "ordinary": 75,
+          "business": 500,
+          "nested": 300,
+          "array_count": 275,
+          "enum": 400,
+          "range": 300,
+          "format": 425,
+          "pattern": 500,
+          "combination": 425,
+          "conditional": 75,
+          "nullable": 50,
+          "one_of": 75,
+          "all_of": 25,
+          "array_range": 25,
+          "dependent_required": 25,
+          "any_of": 25,
+          "optional": 25,
+          "meeting_record": 80,
+          "exact_participant_count": 80,
+          "colloquial_chinese": 80,
+          "absolute_date": 26,
+          "relative_tomorrow": 27,
+          "relative_day_after_tomorrow": 27
+        },
+        "witness_counts": {
+          "positive": 30682,
+          "negative": 141788
+        }
+      },
+      "challenge": {
+        "n": 100,
+        "raw_n": 100,
+        "families": 100,
+        "unique_schemas": 55,
+        "sha256": "717641f8144134785131eac3e6a60bfdba5627114b46be76e6385a2c2b1a3f0d",
+        "tracks": {
+          "requirements": 100
+        },
+        "unseen_operator_combination_rows": 90,
+        "rules": {
+          "scalar": 10,
+          "enum": 52,
+          "numeric_bounds": 52,
+          "identifier_pattern": 100,
+          "optional_field": 30,
+          "nested_object": 50,
+          "array": 50,
+          "array_length": 50,
+          "ordered_array": 50,
+          "date_format": 31,
+          "leading_zero_phone": 25,
+          "conditional": 20,
+          "branching": 20,
+          "optional_branch_field": 10,
+          "dependent_required": 20,
+          "date_time_format": 10,
+          "relative_date": 10,
+          "timezone_reference": 10,
+          "nullable": 10,
+          "missing_information": 10,
+          "format_email": 20,
+          "min_length": 10,
+          "max_length": 10,
+          "boundary_value": 10,
+          "string_escaping": 10,
+          "newline": 10,
+          "quotation_marks": 10,
+          "backslash": 10,
+          "any_of": 10,
+          "all_of": 10
+        },
+        "witness_counts": {
+          "positive": 4157,
+          "negative": 14883
+        }
+      }
+    },
+    "excluded": [
+      {
+        "id": "val_internship_offer_018",
+        "split": "validation",
+        "reason": "duplicate_input"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "epoch": 3,
+  "best_epoch": 3,
+  "best_validation_joint": 0.22418879056047197,
+  "trainable_parameters": 3041856,
+  "best_selection_key": [
+    0.22418879056047197,
+    0.7433628318584071,
+    0.7254722339221477,
+    0.6696165191740413
+  ],
+  "training_seconds": 1648.412256391719,
+  "validation_seconds": 845.6505400678143,
+  "training_peak_allocated_gb": 11.190578176,
+  "frozen_probe_checks_passed": true
+}

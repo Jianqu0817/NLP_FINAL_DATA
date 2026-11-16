@@ -2,6 +2,3 @@
 __pycache__/
 *.pyc
 tmp/
-runs/
-model_manifest.json
-environment.freeze.txt
