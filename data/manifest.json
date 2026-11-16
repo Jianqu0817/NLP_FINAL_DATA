@@ -1,0 +1,177 @@
+{
+  "generation": "GPT-6 Luna max, four workers; model-assisted synthetic templates",
+  "human_test_available": false,
+  "splits": {
+    "train": {
+      "n": 2300,
+      "raw_n": 2300,
+      "families": 95,
+      "unique_schemas": 166,
+      "sha256": "9d1532288c59b191f4540a709512c835bc9fafb763c5517a5a7ee309cd2b7cd6",
+      "tracks": {
+        "requirements": 2000,
+        "natural_meeting": 300
+      },
+      "unseen_operator_combination_rows": 0,
+      "rules": {
+        "pattern": 1850,
+        "enum": 1550,
+        "maxLength": 950,
+        "nested_object": 1800,
+        "format_date": 1000,
+        "array": 1200,
+        "exact_array_length": 1000,
+        "numeric_bounds": 1800,
+        "allOf": 200,
+        "nullable": 200,
+        "optional_property": 600,
+        "conditional": 200,
+        "if_then_else": 200,
+        "const": 400,
+        "format_email": 600,
+        "dependentRequired": 200,
+        "oneOf": 200,
+        "anyOf": 200,
+        "meeting_record": 300,
+        "exact_participant_count": 300,
+        "colloquial_chinese": 300,
+        "absolute_date": 100,
+        "relative_tomorrow": 100,
+        "relative_day_after_tomorrow": 100
+      }
+    },
+    "validation": {
+      "n": 339,
+      "raw_n": 340,
+      "families": 16,
+      "unique_schemas": 18,
+      "sha256": "c5ab77db4669713d6a1126d9c9697b5ddc7dd17479a601b19861f89fbc8b9712",
+      "tracks": {
+        "requirements": 299,
+        "natural_meeting": 40
+      },
+      "unseen_operator_combination_rows": 174,
+      "rules": {
+        "ordinary": 125,
+        "college": 299,
+        "enum": 174,
+        "pattern": 150,
+        "range": 250,
+        "nested": 150,
+        "array_count": 150,
+        "format": 175,
+        "combination": 174,
+        "conditional": 49,
+        "array": 25,
+        "nullable": 50,
+        "dependent_required": 50,
+        "optional": 49,
+        "meeting_record": 40,
+        "exact_participant_count": 40,
+        "colloquial_chinese": 40,
+        "absolute_date": 13,
+        "relative_tomorrow": 14,
+        "relative_day_after_tomorrow": 13
+      },
+      "witness_counts": {
+        "positive": 16074,
+        "negative": 60430
+      }
+    },
+    "test": {
+      "n": 580,
+      "raw_n": 580,
+      "families": 28,
+      "unique_schemas": 26,
+      "sha256": "c7d4f520156e56891f950d1b961de73414859717cc1942a87ea2f07414f4dea9",
+      "tracks": {
+        "requirements": 500,
+        "natural_meeting": 80
+      },
+      "unseen_operator_combination_rows": 275,
+      "rules": {
+        "ordinary": 75,
+        "business": 500,
+        "nested": 300,
+        "array_count": 275,
+        "enum": 400,
+        "range": 300,
+        "format": 425,
+        "pattern": 500,
+        "combination": 425,
+        "conditional": 75,
+        "nullable": 50,
+        "one_of": 75,
+        "all_of": 25,
+        "array_range": 25,
+        "dependent_required": 25,
+        "any_of": 25,
+        "optional": 25,
+        "meeting_record": 80,
+        "exact_participant_count": 80,
+        "colloquial_chinese": 80,
+        "absolute_date": 26,
+        "relative_tomorrow": 27,
+        "relative_day_after_tomorrow": 27
+      },
+      "witness_counts": {
+        "positive": 30682,
+        "negative": 141788
+      }
+    },
+    "challenge": {
+      "n": 100,
+      "raw_n": 100,
+      "families": 100,
+      "unique_schemas": 55,
+      "sha256": "717641f8144134785131eac3e6a60bfdba5627114b46be76e6385a2c2b1a3f0d",
+      "tracks": {
+        "requirements": 100
+      },
+      "unseen_operator_combination_rows": 90,
+      "rules": {
+        "scalar": 10,
+        "enum": 52,
+        "numeric_bounds": 52,
+        "identifier_pattern": 100,
+        "optional_field": 30,
+        "nested_object": 50,
+        "array": 50,
+        "array_length": 50,
+        "ordered_array": 50,
+        "date_format": 31,
+        "leading_zero_phone": 25,
+        "conditional": 20,
+        "branching": 20,
+        "optional_branch_field": 10,
+        "dependent_required": 20,
+        "date_time_format": 10,
+        "relative_date": 10,
+        "timezone_reference": 10,
+        "nullable": 10,
+        "missing_information": 10,
+        "format_email": 20,
+        "min_length": 10,
+        "max_length": 10,
+        "boundary_value": 10,
+        "string_escaping": 10,
+        "newline": 10,
+        "quotation_marks": 10,
+        "backslash": 10,
+        "any_of": 10,
+        "all_of": 10
+      },
+      "witness_counts": {
+        "positive": 4157,
+        "negative": 14883
+      }
+    }
+  },
+  "excluded": [
+    {
+      "id": "val_internship_offer_018",
+      "split": "validation",
+      "reason": "duplicate_input"
+    }
+  ]
+}

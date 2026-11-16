@@ -1,0 +1,18 @@
+{
+  "scripts/download_model.py": "91b11a40bfe649fbba65fa8848679160a43b2de9431f55d68fca64b063670849",
+  "scripts/evaluation.py": "a22d4081a6e374616efa0d4999e73b93deb8feefd2dc0375d1f12b04f22012c1",
+  "scripts/experiment.py": "73a1279cb060c015981a0b9450ca25d6ccdb144afa78070e8d606a610b7895f1",
+  "scripts/generate_challenge.py": "6c7bfaa2e0b8e150f9e80f14b3fcbbe8f8fa954a5ff00a8c9b8ef2709e811c46",
+  "scripts/generate_eval.py": "f0ecdd1dc1ff9036b282a63be3d7ceeb112b8ef8c7425fc375a6078be7cb7649",
+  "scripts/generate_natural.py": "656fc4e9174a75f1030428df53f5b58fa84824d93624e80013e6b04b4051a87c",
+  "scripts/generate_train.py": "64f5a2e72a9877c520a02c21e471a003623f29e52d27e2ffd610a82e10bba9b2",
+  "scripts/pipeline.py": "351f1bac688aa0c5fc6126fbef48599ec362e675129f4b7a638df2d39970a132",
+  "scripts/prepare_data.py": "d3d675acd478ab1d9c94c982b285ed3db5dd4111fe3752f13234361ecbce3e44",
+  "scripts/remote.py": "dd53211dcf9d5c734daebbc8cab8da3e65ff18d38255c3e9fc94ea4b1bd9541d",
+  "scripts/summarize.py": "5be89149e205d85993d37038ffc19f529e0b6f703891ff07ba8f1af54e95e764",
+  "scripts/test_evaluation.py": "1798de0b9539a6203efc07f1e0d20c173dd3ac5467f3eaa36d13aeeb7f7ae22b",
+  "scripts/run_all.sh": "97fbf32bb7d8513f28dab8233f6ff3c0a7c6516d6d9c16d7efe74745be3fc269",
+  "scripts/setup_remote.sh": "49b769a38150e4bc94fae8c15ac9ae74c434bc3b409e40a0fd420c9787f04c98",
+  "requirements.txt": "f839beec94cdcc68ceacaa75ea8e113a910701902adb54d3c939d6d50c98cb31",
+  "DATA_CONTRACT.md": "54525883fcfe0b094aee8df1b6bfc76516abc594388b2bebd72893815192551f"
+}

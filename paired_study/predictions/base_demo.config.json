@@ -1,0 +1,39 @@
+{
+  "condition": "base_demo",
+  "split": "paired",
+  "checkpoint": null,
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_path": "/root/gpufree-data/hf_cache/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+    "endpoint": "https://hf-mirror.com"
+  },
+  "gpu": "NVIDIA L40S",
+  "seed": 42,
+  "eval_batch": 16,
+  "max_new_tokens": 2048,
+  "decoding": "greedy",
+  "demo": [
+    {
+      "input": "把一条标签记录转成规定的输出。字段 label 是字符串，这条记录的标签是青瓷。",
+      "reference_schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label"
+        ],
+        "additionalProperties": false
+      },
+      "reference_data": {
+        "label": "青瓷"
+      }
+    }
+  ],
+  "system": "你负责将中文要求转换成 JSON Schema 和具体 JSON 数据。只输出一个 JSON 对象，恰好包含 schema 和 data 两个键，两者值均为对象。先输出 schema，再输出 data；不要输出解释、Markdown代码块或思考过程。\nSchema 根对象必须包含 \"$schema\": \"https://json-schema.org/draft/2020-12/schema\" 和 \"type\": \"object\"，不得省略这两个声明。字段名严格按请求给出的英文名。除明确可选或条件必填的字段外，字段默认必填；对象默认禁止额外字段。姓名、文本、电话和标识符是字符串，保留前导零。数组按输入顺序排列。明确说恰好几项时设置数组最小和最大长度为该数；具体姓名、日期、电话等实例值不自动成为 const 规则。不要添加未要求的范围、枚举或长度限制。明确要求缺失值用 null 时，字段类型必须允许 null。相对日期根据提供的参考日期和时区换算。\n支持基本类型、properties、required、additionalProperties、items、minItems/maxItems、enum、minimum/maximum、minLength/maxLength、pattern、format、if/then/else、dependentRequired、oneOf/anyOf/allOf和明确要求的const；不使用引用。条件字段必须在properties中声明，区分无条件必填和条件必填。数据必须忠实于请求并通过生成的Schema。\n普通口语会议请求未指定字段名时，固定输出 start_time（带时区的date-time字符串）、location（原文地点字符串）、participants（参会者对象数组，每项只有name和phone两个字符串字段）。这三个会议字段以及每人的name/phone均必填，所有对象禁止额外字段；participants最小最大长度均为明确的参会人数。不要自行添加会议标题等字段。",
+  "n": 96
+}

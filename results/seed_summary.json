@@ -1,0 +1,26 @@
+{
+  "adapter_test": {
+    "completed_runs": 1,
+    "joint_mean": 0.3603448275862069,
+    "joint_sd": null,
+    "note": "three-seed result only when completed_runs=3"
+  },
+  "adapter_challenge": {
+    "completed_runs": 1,
+    "joint_mean": 0.17,
+    "joint_sd": null,
+    "note": "three-seed result only when completed_runs=3"
+  },
+  "lora_test": {
+    "completed_runs": 1,
+    "joint_mean": 0.4810344827586207,
+    "joint_sd": null,
+    "note": "three-seed result only when completed_runs=3"
+  },
+  "lora_challenge": {
+    "completed_runs": 1,
+    "joint_mean": 0.13,
+    "joint_sd": null,
+    "note": "three-seed result only when completed_runs=3"
+  }
+}

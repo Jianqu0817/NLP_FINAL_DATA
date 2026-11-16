@@ -1,0 +1,2206 @@
+[
+  {
+    "dataset": "confirm_original",
+    "condition": "B",
+    "id": "confirm_count_04_a",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "a",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":4,\"minItems\":2,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 1.0,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 1.0,
+      "schema_suite_pass": 1,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 1,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 1.0,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 1,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "balanced_rule_score": 1.0,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        2,
+        4
+      ],
+      "target": [
+        2,
+        4
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        null
+      ],
+      "distractor_has_any_bound": false
+    }
+  },
+  {
+    "dataset": "confirm_original",
+    "condition": "B",
+    "id": "confirm_count_04_b",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "b",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":5,\"minItems\":3,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 3,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 1.0,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 1.0,
+      "schema_suite_pass": 1,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 1,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 1.0,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 1,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "balanced_rule_score": 1.0,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        3,
+        5
+      ],
+      "target": [
+        3,
+        5
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        null
+      ],
+      "distractor_has_any_bound": false
+    }
+  },
+  {
+    "dataset": "confirm_original",
+    "condition": "D",
+    "id": "confirm_count_04_a",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "a",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":4,\"minItems\":2,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"maxItems\":2,\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 0.8571428571428571,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 0.9285714285714286,
+      "schema_suite_pass": 0,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 0,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 0.9285714285714286,
+      "probe_correct": 13,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 0,
+      "probe_correct": 13,
+      "probe_total": 14,
+      "balanced_rule_score": 0.9285714285714286,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": false,
+        "correct": false
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        2,
+        4
+      ],
+      "target": [
+        2,
+        4
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        2
+      ],
+      "distractor_has_any_bound": true
+    }
+  },
+  {
+    "dataset": "confirm_original",
+    "condition": "D",
+    "id": "confirm_count_04_b",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "b",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":5,\"minItems\":3,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"maxItems\":2,\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 3,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 0.8571428571428571,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 0.9285714285714286,
+      "schema_suite_pass": 0,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 0,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 0.9285714285714286,
+      "probe_correct": 13,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 0,
+      "probe_correct": 13,
+      "probe_total": 14,
+      "balanced_rule_score": 0.9285714285714286,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": false,
+        "correct": false
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        3,
+        5
+      ],
+      "target": [
+        3,
+        5
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        2
+      ],
+      "distractor_has_any_bound": true
+    }
+  },
+  {
+    "dataset": "confirm_original",
+    "condition": "E",
+    "id": "confirm_count_04_a",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "a",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":4,\"minItems\":2,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 1.0,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 1.0,
+      "schema_suite_pass": 1,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 1,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 1.0,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 1,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "balanced_rule_score": 1.0,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        2,
+        4
+      ],
+      "target": [
+        2,
+        4
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        null
+      ],
+      "distractor_has_any_bound": false
+    }
+  },
+  {
+    "dataset": "confirm_original",
+    "condition": "E",
+    "id": "confirm_count_04_b",
+    "pair_id": "confirm_count_04",
+    "family": "count_bounds",
+    "arm": "b",
+    "mode": "strict",
+    "missing_prediction": false,
+    "truncated": false,
+    "raw_output": "{\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"beam_presets\":{\"items\":{\"type\":\"string\"},\"maxItems\":5,\"minItems\":3,\"type\":\"array\"},\"cue_label\":{\"type\":\"string\"},\"gel_codes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"required\":[\"cue_label\",\"gel_codes\",\"beam_presets\"],\"type\":\"object\"},\"data\":{\"beam_presets\":[\"顶光\",\"侧光\",\"逆光\"],\"cue_label\":\"序幕蓝\",\"gel_codes\":[\"蓝片\",\"琥珀片\"]}}",
+    "generated_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "beam_presets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 3,
+          "type": "array"
+        },
+        "cue_label": {
+          "type": "string"
+        },
+        "gel_codes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "cue_label",
+        "gel_codes",
+        "beam_presets"
+      ],
+      "type": "object"
+    },
+    "generated_data": {
+      "beam_presets": [
+        "顶光",
+        "侧光",
+        "逆光"
+      ],
+      "cue_label": "序幕蓝",
+      "gel_codes": [
+        "蓝片",
+        "琥珀片"
+      ]
+    },
+    "original_metrics": {
+      "format_success": 1,
+      "schema_meta_validity": 1,
+      "schema_validity": 1,
+      "schema_rule_evaluable": 1,
+      "positive_acceptance": 1.0,
+      "negative_rejection": 1.0,
+      "balanced_rule_score": 1.0,
+      "schema_suite_pass": 1,
+      "data_accuracy": 1,
+      "reference_compliance": 1,
+      "self_consistency": 1,
+      "joint_success": 1,
+      "field_correct": 6,
+      "field_total": 6,
+      "extra_fields": 0,
+      "error": null,
+      "dialect_declared": 1,
+      "root_object_declared": 1,
+      "profile_keywords_compliant": 1,
+      "probe_accuracy": 1.0,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "rewrapped": 0
+    },
+    "metrics": {
+      "schema_meta_validity": 1,
+      "schema_rule_evaluable": 1,
+      "schema_suite_pass": 1,
+      "probe_correct": 14,
+      "probe_total": 14,
+      "balanced_rule_score": 1.0,
+      "self_consistency": 1
+    },
+    "probes": [
+      {
+        "id": "reference",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": []
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_1",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_2",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "focus_n_3",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_4",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_5",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "focus_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项",
+            "另一项"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_0",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "distractor_n_6",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项",
+            "旁项"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      },
+      {
+        "id": "wrong_item_type",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            17,
+            17,
+            17
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "missing_focus",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ]
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "extra_field",
+        "instance": {
+          "cue_label": "序幕蓝",
+          "gel_codes": [
+            "蓝片",
+            "琥珀片"
+          ],
+          "beam_presets": [
+            "顶光",
+            "侧光",
+            "逆光"
+          ],
+          "confirm_extra": "多余"
+        },
+        "expected_accept": false,
+        "predicted_accept": false,
+        "correct": true
+      },
+      {
+        "id": "other_content",
+        "instance": {
+          "cue_label": "另一编号",
+          "gel_codes": [
+            "替换",
+            "替换"
+          ],
+          "beam_presets": [
+            "替换",
+            "替换",
+            "替换"
+          ]
+        },
+        "expected_accept": true,
+        "predicted_accept": true,
+        "correct": true
+      }
+    ],
+    "audit": {
+      "original_profile_error": null,
+      "profile_reasons": [],
+      "outside_project_keywords": [],
+      "references": []
+    },
+    "semantic_error": null,
+    "placement": {
+      "label": "correct_at_array",
+      "focus_field": "beam_presets",
+      "expected": [
+        3,
+        5
+      ],
+      "target": [
+        3,
+        5
+      ],
+      "root": [
+        null,
+        null
+      ],
+      "root_has_any_bound": false,
+      "target_missing_bound": false,
+      "distractor": [
+        null,
+        null
+      ],
+      "distractor_has_any_bound": false
+    }
+  }
+]

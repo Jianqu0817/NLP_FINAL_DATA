@@ -1,0 +1,127 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.53it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.52it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.25it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/Base.jsonl", "done": 16, "total": 48, "seconds": 12.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/Base.jsonl", "done": 32, "total": 48, "seconds": 24.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/Base.jsonl", "done": 48, "total": 48, "seconds": 33.6}
+EVAL_COMPLETE Base confirm_original 48 0 33.61
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/Base.jsonl", "done": 16, "total": 48, "seconds": 12.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/Base.jsonl", "done": 32, "total": 48, "seconds": 24.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/Base.jsonl", "done": 48, "total": 48, "seconds": 33.3}
+EVAL_COMPLETE Base confirm_wording 48 0 33.34
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/Base.jsonl", "done": 16, "total": 48, "seconds": 12.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/Base.jsonl", "done": 32, "total": 48, "seconds": 25.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/Base.jsonl", "done": 48, "total": 48, "seconds": 34.3}
+EVAL_COMPLETE Base confirm_order 48 0 34.26
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.53it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.27it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/A.jsonl", "done": 16, "total": 48, "seconds": 7.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/A.jsonl", "done": 32, "total": 48, "seconds": 15.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/A.jsonl", "done": 48, "total": 48, "seconds": 20.8}
+EVAL_COMPLETE A confirm_original 48 0 20.84
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/A.jsonl", "done": 16, "total": 48, "seconds": 7.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/A.jsonl", "done": 32, "total": 48, "seconds": 14.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/A.jsonl", "done": 48, "total": 48, "seconds": 19.5}
+EVAL_COMPLETE A confirm_wording 48 0 19.49
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/A.jsonl", "done": 16, "total": 48, "seconds": 7.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/A.jsonl", "done": 32, "total": 48, "seconds": 15.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/A.jsonl", "done": 48, "total": 48, "seconds": 20.7}
+EVAL_COMPLETE A confirm_order 48 0 20.71
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.53it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.55it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.29it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/C.jsonl", "done": 16, "total": 48, "seconds": 8.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/C.jsonl", "done": 32, "total": 48, "seconds": 15.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/C.jsonl", "done": 48, "total": 48, "seconds": 21.9}
+EVAL_COMPLETE C confirm_original 48 0 21.85
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/C.jsonl", "done": 16, "total": 48, "seconds": 7.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/C.jsonl", "done": 32, "total": 48, "seconds": 14.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/C.jsonl", "done": 48, "total": 48, "seconds": 21.0}
+EVAL_COMPLETE C confirm_wording 48 0 20.98
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/C.jsonl", "done": 16, "total": 48, "seconds": 7.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/C.jsonl", "done": 32, "total": 48, "seconds": 15.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/C.jsonl", "done": 48, "total": 48, "seconds": 22.2}
+EVAL_COMPLETE C confirm_order 48 0 22.2
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.55it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.55it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.30it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/B.jsonl", "done": 16, "total": 48, "seconds": 7.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/B.jsonl", "done": 32, "total": 48, "seconds": 14.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/B.jsonl", "done": 48, "total": 48, "seconds": 20.4}
+EVAL_COMPLETE B confirm_original 48 0 20.4
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/B.jsonl", "done": 16, "total": 48, "seconds": 7.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/B.jsonl", "done": 32, "total": 48, "seconds": 14.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/B.jsonl", "done": 48, "total": 48, "seconds": 19.6}
+EVAL_COMPLETE B confirm_wording 48 0 19.62
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/B.jsonl", "done": 16, "total": 48, "seconds": 7.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/B.jsonl", "done": 32, "total": 48, "seconds": 14.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/B.jsonl", "done": 48, "total": 48, "seconds": 20.1}
+EVAL_COMPLETE B confirm_order 48 0 20.08
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 16, "total": 96, "seconds": 5.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 32, "total": 96, "seconds": 11.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 48, "total": 96, "seconds": 17.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 64, "total": 96, "seconds": 24.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 80, "total": 96, "seconds": 30.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/B.jsonl", "done": 96, "total": 96, "seconds": 36.0}
+EVAL_COMPLETE B old_original 96 0 36.0
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 16, "total": 96, "seconds": 5.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 32, "total": 96, "seconds": 12.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 48, "total": 96, "seconds": 18.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 64, "total": 96, "seconds": 24.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 80, "total": 96, "seconds": 30.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/B.jsonl", "done": 96, "total": 96, "seconds": 35.7}
+EVAL_COMPLETE B old_paraphrase 96 0 35.66
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.54it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.27it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/D.jsonl", "done": 16, "total": 48, "seconds": 7.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/D.jsonl", "done": 32, "total": 48, "seconds": 14.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/D.jsonl", "done": 48, "total": 48, "seconds": 20.0}
+EVAL_COMPLETE D confirm_original 48 0 20.01
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/D.jsonl", "done": 16, "total": 48, "seconds": 7.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/D.jsonl", "done": 32, "total": 48, "seconds": 14.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/D.jsonl", "done": 48, "total": 48, "seconds": 20.0}
+EVAL_COMPLETE D confirm_wording 48 0 19.99
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/D.jsonl", "done": 16, "total": 48, "seconds": 8.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/D.jsonl", "done": 32, "total": 48, "seconds": 19.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/D.jsonl", "done": 48, "total": 48, "seconds": 25.1}
+EVAL_COMPLETE D confirm_order 48 0 25.09
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 16, "total": 96, "seconds": 7.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 32, "total": 96, "seconds": 15.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 48, "total": 96, "seconds": 23.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 64, "total": 96, "seconds": 30.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 80, "total": 96, "seconds": 38.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/D.jsonl", "done": 96, "total": 96, "seconds": 43.9}
+EVAL_COMPLETE D old_original 96 0 43.95
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 16, "total": 96, "seconds": 6.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 32, "total": 96, "seconds": 13.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 48, "total": 96, "seconds": 20.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 64, "total": 96, "seconds": 26.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 80, "total": 96, "seconds": 34.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/D.jsonl", "done": 96, "total": 96, "seconds": 39.8}
+EVAL_COMPLETE D old_paraphrase 96 0 39.78
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.39it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.44it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.13it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/E.jsonl", "done": 16, "total": 48, "seconds": 7.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/E.jsonl", "done": 32, "total": 48, "seconds": 14.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_original/E.jsonl", "done": 48, "total": 48, "seconds": 20.4}
+EVAL_COMPLETE E confirm_original 48 0 20.36
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/E.jsonl", "done": 16, "total": 48, "seconds": 7.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/E.jsonl", "done": 32, "total": 48, "seconds": 14.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_wording/E.jsonl", "done": 48, "total": 48, "seconds": 20.1}
+EVAL_COMPLETE E confirm_wording 48 0 20.12
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/E.jsonl", "done": 16, "total": 48, "seconds": 7.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/E.jsonl", "done": 32, "total": 48, "seconds": 15.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/confirm_order/E.jsonl", "done": 48, "total": 48, "seconds": 20.5}
+EVAL_COMPLETE E confirm_order 48 0 20.52
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 16, "total": 96, "seconds": 10.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 32, "total": 96, "seconds": 18.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 48, "total": 96, "seconds": 29.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 64, "total": 96, "seconds": 37.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 80, "total": 96, "seconds": 210.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_original/E.jsonl", "done": 96, "total": 96, "seconds": 222.1}
+EVAL_COMPLETE E old_original 96 1 222.09
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 16, "total": 96, "seconds": 6.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 32, "total": 96, "seconds": 13.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 48, "total": 96, "seconds": 21.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 64, "total": 96, "seconds": 28.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 80, "total": 96, "seconds": 36.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/mechanism_study/predictions/old_paraphrase/E.jsonl", "done": 96, "total": 96, "seconds": 42.6}
+EVAL_COMPLETE E old_paraphrase 96 0 42.62
+EVAL_ALL_DONE

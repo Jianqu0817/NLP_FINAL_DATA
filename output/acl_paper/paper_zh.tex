@@ -1,0 +1,21 @@
+\documentclass[11pt]{article}
+\usepackage[preprint]{acl}
+\usepackage{fontspec,xeCJK}
+\setmainfont{Times New Roman}
+\IfFontExistsTF{SimSun}{\setCJKmainfont{SimSun}[BoldFont=SimHei,ItalicFont=KaiTi]}{\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolHei-Regular,ItalicFont=FandolKai-Regular]}
+\usepackage{booktabs,amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{etoolbox}
+\makeatletter\patchcmd{\thebibliography}{References\@mkboth}{参考文献\@mkboth}{}{}\makeatother
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{图}
+\newcommand{\PaperAuthor}{\author{温贝宁 \\ MC645182 \And 王乾硕 \\ MC648234 \And 菅方源 \\ MC651135}}
+\newcommand{\Lang}[2]{#2}
+\input{tables}
+\begin{document}
+\input{body_zh}
+\bibliography{references}
+\appendix
+\input{appendix}
+\end{document}

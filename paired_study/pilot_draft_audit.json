@@ -1,0 +1,496 @@
+{
+  "test/natural_meeting": {
+    "n": 80,
+    "counts": {
+      "Base": {
+        "profile": 80,
+        "draft": 80,
+        "profile_evaluable": 80,
+        "draft_evaluable": 80,
+        "status": {
+          "reused": 80
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "Adapter": {
+        "profile": 80,
+        "draft": 80,
+        "profile_evaluable": 80,
+        "draft_evaluable": 80,
+        "status": {
+          "reused": 80
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "LoRA": {
+        "profile": 80,
+        "draft": 80,
+        "profile_evaluable": 80,
+        "draft_evaluable": 80,
+        "status": {
+          "reused": 80
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "Base + example": {
+        "profile": 50,
+        "draft": 51,
+        "profile_evaluable": 62,
+        "draft_evaluable": 63,
+        "status": {
+          "reused": 62,
+          "meta_invalid": 11,
+          "format": 6,
+          "newly_evaluable": 1
+        },
+        "rescued_keyword_sets": {
+          "uniqueItems": 1
+        },
+        "rescued_ids": [
+          "NAT-TES-05-007"
+        ]
+      }
+    },
+    "paired_draft": {
+      "Base vs Adapter": {
+        "all": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        }
+      },
+      "Base vs LoRA": {
+        "all": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        }
+      },
+      "Base vs Base + example": {
+        "all": {
+          "n": 80,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 29,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 63,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 12,
+          "neither": 0
+        }
+      },
+      "Adapter vs LoRA": {
+        "all": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 80,
+          "both": 80,
+          "right_only": 0,
+          "left_only": 0,
+          "neither": 0
+        }
+      },
+      "Adapter vs Base + example": {
+        "all": {
+          "n": 80,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 29,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 63,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 12,
+          "neither": 0
+        }
+      },
+      "LoRA vs Base + example": {
+        "all": {
+          "n": 80,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 29,
+          "neither": 0
+        },
+        "both_draft_evaluable": {
+          "n": 63,
+          "both": 51,
+          "right_only": 0,
+          "left_only": 12,
+          "neither": 0
+        }
+      }
+    }
+  },
+  "test/requirements": {
+    "n": 500,
+    "counts": {
+      "Base": {
+        "profile": 162,
+        "draft": 176,
+        "profile_evaluable": 292,
+        "draft_evaluable": 401,
+        "status": {
+          "reused": 292,
+          "format": 98,
+          "newly_evaluable": 109,
+          "wrong_dialect": 1
+        },
+        "rescued_keyword_sets": {
+          "nullable": 7,
+          "dependencies": 7
+        },
+        "rescued_ids": [
+          "test_recruiting_candidate_001",
+          "test_recruiting_candidate_007",
+          "test_recruiting_candidate_011",
+          "test_recruiting_candidate_012",
+          "test_recruiting_candidate_013",
+          "test_recruiting_candidate_019",
+          "test_recruiting_candidate_021",
+          "test_supplier_qualification_004",
+          "test_supplier_qualification_006",
+          "test_supplier_qualification_008",
+          "test_supplier_qualification_012",
+          "test_supplier_qualification_014",
+          "test_supplier_qualification_018",
+          "test_supplier_qualification_020"
+        ]
+      },
+      "Adapter": {
+        "profile": 133,
+        "draft": 133,
+        "profile_evaluable": 465,
+        "draft_evaluable": 465,
+        "status": {
+          "reused": 465,
+          "format": 30,
+          "meta_invalid": 5
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "LoRA": {
+        "profile": 208,
+        "draft": 209,
+        "profile_evaluable": 451,
+        "draft_evaluable": 460,
+        "status": {
+          "reused": 451,
+          "format": 39,
+          "meta_invalid": 1,
+          "newly_evaluable": 9
+        },
+        "rescued_keyword_sets": {
+          " minLength": 1
+        },
+        "rescued_ids": [
+          "test_supplier_qualification_020"
+        ]
+      },
+      "Base + example": {
+        "profile": 118,
+        "draft": 118,
+        "profile_evaluable": 356,
+        "draft_evaluable": 387,
+        "status": {
+          "reused": 356,
+          "format": 106,
+          "newly_evaluable": 31,
+          "reference": 5,
+          "meta_invalid": 2
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      }
+    },
+    "paired_draft": {
+      "Base vs Adapter": {
+        "all": {
+          "n": 500,
+          "both": 85,
+          "right_only": 48,
+          "left_only": 91,
+          "neither": 276
+        },
+        "both_draft_evaluable": {
+          "n": 372,
+          "both": 85,
+          "right_only": 21,
+          "left_only": 68,
+          "neither": 198
+        }
+      },
+      "Base vs LoRA": {
+        "all": {
+          "n": 500,
+          "both": 137,
+          "right_only": 72,
+          "left_only": 39,
+          "neither": 252
+        },
+        "both_draft_evaluable": {
+          "n": 378,
+          "both": 137,
+          "right_only": 32,
+          "left_only": 25,
+          "neither": 184
+        }
+      },
+      "Base vs Base + example": {
+        "all": {
+          "n": 500,
+          "both": 91,
+          "right_only": 27,
+          "left_only": 85,
+          "neither": 297
+        },
+        "both_draft_evaluable": {
+          "n": 312,
+          "both": 91,
+          "right_only": 6,
+          "left_only": 77,
+          "neither": 138
+        }
+      },
+      "Adapter vs LoRA": {
+        "all": {
+          "n": 500,
+          "both": 97,
+          "right_only": 112,
+          "left_only": 36,
+          "neither": 255
+        },
+        "both_draft_evaluable": {
+          "n": 435,
+          "both": 97,
+          "right_only": 89,
+          "left_only": 24,
+          "neither": 225
+        }
+      },
+      "Adapter vs Base + example": {
+        "all": {
+          "n": 500,
+          "both": 54,
+          "right_only": 64,
+          "left_only": 79,
+          "neither": 303
+        },
+        "both_draft_evaluable": {
+          "n": 353,
+          "both": 54,
+          "right_only": 44,
+          "left_only": 74,
+          "neither": 181
+        }
+      },
+      "LoRA vs Base + example": {
+        "all": {
+          "n": 500,
+          "both": 100,
+          "right_only": 18,
+          "left_only": 109,
+          "neither": 273
+        },
+        "both_draft_evaluable": {
+          "n": 349,
+          "both": 100,
+          "right_only": 10,
+          "left_only": 99,
+          "neither": 140
+        }
+      }
+    }
+  },
+  "challenge/requirements": {
+    "n": 100,
+    "counts": {
+      "Base": {
+        "profile": 36,
+        "draft": 36,
+        "profile_evaluable": 75,
+        "draft_evaluable": 91,
+        "status": {
+          "reused": 75,
+          "format": 9,
+          "newly_evaluable": 16
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "Adapter": {
+        "profile": 31,
+        "draft": 31,
+        "profile_evaluable": 90,
+        "draft_evaluable": 90,
+        "status": {
+          "reused": 90,
+          "format": 10
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "LoRA": {
+        "profile": 30,
+        "draft": 30,
+        "profile_evaluable": 90,
+        "draft_evaluable": 97,
+        "status": {
+          "reused": 90,
+          "format": 3,
+          "newly_evaluable": 7
+        },
+        "rescued_keyword_sets": {},
+        "rescued_ids": []
+      },
+      "Base + example": {
+        "profile": 13,
+        "draft": 15,
+        "profile_evaluable": 66,
+        "draft_evaluable": 86,
+        "status": {
+          "format": 14,
+          "reused": 66,
+          "newly_evaluable": 20
+        },
+        "rescued_keyword_sets": {
+          "nullable": 2
+        },
+        "rescued_ids": [
+          "challenge-004",
+          "challenge-009"
+        ]
+      }
+    },
+    "paired_draft": {
+      "Base vs Adapter": {
+        "all": {
+          "n": 100,
+          "both": 22,
+          "right_only": 9,
+          "left_only": 14,
+          "neither": 55
+        },
+        "both_draft_evaluable": {
+          "n": 81,
+          "both": 22,
+          "right_only": 5,
+          "left_only": 9,
+          "neither": 45
+        }
+      },
+      "Base vs LoRA": {
+        "all": {
+          "n": 100,
+          "both": 20,
+          "right_only": 10,
+          "left_only": 16,
+          "neither": 54
+        },
+        "both_draft_evaluable": {
+          "n": 88,
+          "both": 20,
+          "right_only": 7,
+          "left_only": 16,
+          "neither": 45
+        }
+      },
+      "Base vs Base + example": {
+        "all": {
+          "n": 100,
+          "both": 8,
+          "right_only": 7,
+          "left_only": 28,
+          "neither": 57
+        },
+        "both_draft_evaluable": {
+          "n": 78,
+          "both": 8,
+          "right_only": 2,
+          "left_only": 24,
+          "neither": 44
+        }
+      },
+      "Adapter vs LoRA": {
+        "all": {
+          "n": 100,
+          "both": 23,
+          "right_only": 7,
+          "left_only": 8,
+          "neither": 62
+        },
+        "both_draft_evaluable": {
+          "n": 90,
+          "both": 23,
+          "right_only": 0,
+          "left_only": 8,
+          "neither": 59
+        }
+      },
+      "Adapter vs Base + example": {
+        "all": {
+          "n": 100,
+          "both": 5,
+          "right_only": 10,
+          "left_only": 26,
+          "neither": 59
+        },
+        "both_draft_evaluable": {
+          "n": 76,
+          "both": 5,
+          "right_only": 10,
+          "left_only": 23,
+          "neither": 38
+        }
+      },
+      "LoRA vs Base + example": {
+        "all": {
+          "n": 100,
+          "both": 3,
+          "right_only": 12,
+          "left_only": 27,
+          "neither": 58
+        },
+        "both_draft_evaluable": {
+          "n": 83,
+          "both": 3,
+          "right_only": 12,
+          "left_only": 24,
+          "neither": 44
+        }
+      }
+    }
+  }
+}

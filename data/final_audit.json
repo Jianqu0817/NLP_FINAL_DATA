@@ -1,0 +1,18 @@
+{
+  "train": {
+    "n": 2300,
+    "valid": 2300
+  },
+  "validation": {
+    "n": 339,
+    "valid": 339
+  },
+  "test": {
+    "n": 580,
+    "valid": 580
+  },
+  "challenge": {
+    "n": 100,
+    "valid": 100
+  }
+}

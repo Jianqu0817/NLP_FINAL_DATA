@@ -1,0 +1,89 @@
+\title{How Do Bottleneck Adapters Shape Rule Generation? A Study of Activation, Width, and Insertion Site}
+\PaperAuthor
+\maketitle
+
+\begin{abstract}
+Generating a correct JSON instance does not guarantee that its accompanying schema expresses the requested rules. We test whether bottleneck adapters can apply a rule to one field without restricting another, varying activation, width, and insertion site on Qwen3-4B, with the unadapted model and LoRA as reference points, and scoring paired requests that change one requirement while preserving instance facts. Moving a narrow affine adapter from the completed block output to the post-attention residual raises complete count-suite success from 3/16 to 8/16 pairs at unchanged changed-rule correctness (30/32); an inspected pair isolates the difference to an unjustified bound written on an unrestricted array. These single-seed results show why changed-rule sensitivity and invariant fidelity must be evaluated together.
+\end{abstract}
+
+\section{Introduction}
+Consider a small assistant model running locally on a personal device, asked to set an alarm. The alarm application accepts records only in a strict structured format: a wrong field name, type, or wrapper is rejected outright. Zero-shot, models of this size often fail at exactly this step. The standard remedy is to keep one frozen backbone and train a small swappable module per application; this is the setting bottleneck adapters were designed for \citep{houlsby2019}.
+
+The record, however, is only half of the deliverable. The same request also states rules for \emph{future} records: which fields are required, whether a note may be empty, how many entries a repeat list may contain. We ask the model to emit these rules as an executable JSON Schema alongside the current instance, and every later record is validated against that contract, not against today's example. A schema is therefore a program for records nobody has submitted yet: filling today's alarm correctly says nothing about whether a legitimate alarm next month will be accepted. The most damaging failures are silent and delayed, such as a length bound attached to an array that nobody constrained, rejecting valid records long after generation. Our experiments use synthetic Chinese requirements whose rule families---count bounds, optionality, nullability, conditional dependency---mirror such assistant-side constraints; we do not evaluate on alarm data itself.
+
+Adapter designs differ along three axes: the activation inside the bottleneck, its width, and the point in the transformer where the update is applied. We treat these axes as hypotheses to test rather than defaults to inherit. Our question: when a requirement bounds one array and leaves another unrestricted, which designs enforce the bound on the target array and leave the distractor free? In paired tests that change one rule sentence while holding the instance fixed, the insertion site produced the clearest separation---relocating the same narrow module left its judgments on the changed rule unchanged, markedly increased the number of rule pairs satisfied in full, and item-level inspection traces the difference to an unjustified length bound written on the unrestricted array. Our contributions are threefold: (i) an executable paired evaluation that scores changed-rule correctness and invariant fidelity separately; (ii) pre-specified activation, width, and site contrasts on a modern decoder-only LLM; (iii) a traced case in which equal changed-rule totals conceal divergent restriction behavior.
+
+\section{Related Work}
+Bottleneck adapters append small down-/up-projection modules to a frozen network \citep{houlsby2019}, and where to append them has been a design variable ever since: after the feed-forward sublayer with reusable language and task modules \citep{pfeiffer2020}, composed without retraining \citep{pfeiffer2021}, or pruned from lower layers at little cost \citep{ruckle2021}. \citet{he2022} unified these variants along two separable axes---how the update is computed and where it is applied---and identified attaching a bottleneck parallel to the feed-forward sublayer as a particularly effective placement. Across this line of work, placements have been selected by task accuracy per trainable parameter; what a placement does to the content the adapted model writes---which constraints it imposes, and where---has not been isolated. Our D--E contrast does exactly this, on a decoder-only LLM, by moving one trained form along the site axis and measuring generated rule behavior.
+
+Interpretability work offers a lens on why site may matter. In a transformer, sublayers communicate through a shared residual stream: each attention and feed-forward module reads from the stream and writes back into it \citep{elhage2021}. Insertion site thus decides which computations can consume an update. A module placed after attention but before the block's feed-forward network changes that network's input, and if its output is also carried forward, later layers read it too; a module placed after the completed block is read only by subsequent layers. We use this as a design hypothesis, not a mechanistic claim: our measurements are behavioral and structural, and we do not analyze what the trained modules internally implement.
+
+Behavioral testing organizes evaluation around targeted capabilities, invariances, and directional changes \citep{ribeiro2020}. We apply that logic to executable JSON Schema decisions. Draft 2020-12 supplies the validation semantics \citep{jsonschema}: correct numbers attached to the wrong schema node need not constrain the intended array. Paired requirements and positive alternatives expose such failures more directly than matching schema strings or validating only the supplied instance.
+
+\section{Experimental Design}
+\paragraph{Goal and design rationale.}
+This study asks one question: when a request puts a size limit on one list and leaves another list unrestricted, which adapter designs write the limit on the named list and leave the other untouched? Answering it needs three ingredients. First, models that differ in exactly one design choice: we train three new adapter variants under the original setup, with the comparisons A--B (activation), B--D (width), and D--E (insertion site) fixed in advance. Second, tests that examine the generated rules themselves. Overall pass rates cannot do this: merging the two objects the unadapted model already produces into the required wrapper, without changing their contents, raises its overall pass rate from 20.9\% to 35.2\%; an earlier pilot likewise showed that adapter and LoRA training raise the overall pass rate from 20.9\% to 36.0\% and 48.1\% on 580 unseen test requests, without saying where the gain came from. Comparing generated rules with a reference answer word by word is equally unreliable, and checking only the record given in the request leaves the rules untested. Third, two separate scores: changed-rule correctness---whether the one changed requirement entered the rules---and whether the rules that should not change did stay unchanged, following behavioral testing's idea of changing one thing at a time \citep{ribeiro2020}.
+
+\paragraph{Hypotheses and conditions.}
+Activation: inside an already nonlinear decoder, a nonlinear bottleneck may be redundant; A--B asks whether SiLU changes rule behavior at matched width. Width: the bottleneck bounds the rank of the update; B--D asks whether a narrower update preserves the target rule while narrowing what else changes. Site: the residual-stream view predicts that an update read by the same block's feed-forward network can have different reach from one read only by later layers; D--E asks whether this shows up in where constraints land.
+All conditions use the frozen Qwen3-4B-Instruct-2507 checkpoint \citep{qwenmodel}. Table~\ref{tab:models} lists the six conditions. A is a width-64 SiLU adapter; B removes its activation; D narrows B to width 16; E moves D to the post-attention residual. C is rank-16 LoRA \citep{hu2022} on attention q/k/v/o projections, with $\alpha=32$ (scale $\alpha/r=2$) and no bias or dropout. The pre-specified local contrasts are A--B, B--D, and D--E; A--C provides a configuration reference.
+
+\ModelTable
+
+For adapter input $h$, the two transformations are
+\begin{align}
+T_{\sigma}(h)&=h+U\sigma(Dh+b_D)+b_U,\\
+T_{\mathrm{aff}}(h)&=h+U(Dh+b_D)+b_U.
+\end{align}
+A uses $\sigma=\operatorname{SiLU}$; B/D/E use the affine form. Its update's linear component has rank at most the bottleneck width, while the surrounding decoder remains nonlinear. A/B share initial tensors, as do D/E. Down-projection weights start from a normal distribution with standard deviation 0.02; its bias and the up projection are zero, making every module initially an identity. B/D have different shapes.
+
+E changes both the carried residual and the MLP input. With $r$ the incoming block residual plus attention output,
+\begin{equation}
+\begin{gathered}
+z=T_{\mathrm{aff}}(r),\\
+h_{\mathrm{out}}=z+\operatorname{MLP}(\operatorname{RMSNorm}(z)).
+\end{gathered}
+\end{equation}
+D instead transforms the completed block output. Small-module tests checked E's outputs and input/adapter gradients against this equation in FP32/BF16, with and without checkpointing.
+
+\paragraph{Training and selection.}
+All five trained conditions use the same 2,300 synthetic training requests, 339 validation requests, seed 42, and three-epoch training policy. Training uses AdamW, learning rate $10^{-4}$, weight decay 0.01, cosine decay, 5\% warmup, microbatch size one, accumulation 16, clipping at 1.0, and a 4,096-token limit. Only assistant targets contribute to loss. Backbone computation is BF16 with SDPA; adapter computation is FP32 and casts outputs back. We train on an NVIDIA L40S with PyTorch 2.7.1+cu128.
+
+Validation decoding after each epoch selects lexicographically by joint success, data accuracy, balanced rule score, and self-consistency; ties retain the earlier epoch. Table~\ref{tab:models} gives the selected epochs. Greedy inference shares the original prompt and chat template, no demonstration, batch size 16, and a 2,048-token cap.
+
+\paragraph{Frozen paired tests.}
+The earlier set contains 48 pairs across count bounds, optionality, nullability, and conditional dependency, each in two aligned wordings. Our confirmation set contains 24 new pairs: 16 count pairs and eight nullable controls. Each pair changes one rule sentence, holding facts and reference data fixed. Count intervals overlap without nesting: $[2,4]$ versus $[1,3]$, or $[3,5]$ versus $[2,4]$, with balanced direction and field order. A named focus array carries the manipulated bound; a second array is explicitly unrestricted. Shared reference data satisfy both arms.
+
+Confirmation has original, rewritten, and reordered versions. Rewriting changes semantic blocks in place; reordering permutes the exact original sentences. Probe labels, protocol, and analysis plan were frozen before inspecting predictions. Probes cover focus lengths 0--6, distractor lengths zero and six, requiredness, types, extra fields, and material values.
+
+\paragraph{Co-primary outcomes.}
+Let $c_{iap}$ indicate that arm $a$ of pair $i$ classifies probe $p$ correctly. Changed-probe correctness averages $c_{i0p}c_{i1p}$ over discriminating comparisons; complete-suite success averages $\prod_{a,p}c_{iap}$ over pairs. Count denominators are 32 comparisons and 16 pairs, respectively. Missing, malformed, and unevaluable replies remain failures. Conditional changed correctness uses only comparisons with two evaluable arms and reports its actual denominator. We require the strict wrapper and score reference-free schemas under Draft 2020-12. A missing dialect declaration is allowed; an explicitly different one fails. Complete-suite success concerns schema behavior; strict joint delivery additionally requires correct data and interface compliance. Symmetric two-object wrapping changes no mechanism-study suite counts. All predictions are present; no confirmation reply is truncated.
+
+\section{Results}
+\ResultsTable
+
+\subsection{Activation and width change the error profile}
+In Table~\ref{tab:results}, removing SiLU (A--B) leaves original changed-probe correctness at 29/32 and changes rewritten correctness from 31/32 to 30/32. After reordering, correctness rises from 19/32 to 30/32. A places exact bounds only at the object root in five reordered items; B does so in none. Nevertheless, complete count suites fall from 9/13/6 to 8/8/5 across original/rewritten/reordered versions. Fixing one placement failure does not ensure better full-schema behavior.
+
+Narrowing the affine module (B--D) changes complete count suites from 8/8/5 to 3/8/3. Both place exact bounds directly on the focus array in all 32 items of each version. The difference therefore cannot be summarized as losing the target interval: D constrains the unrestricted distractor in 22/14/23 items, versus B's 14/14/22. Nullable suites instead improve from 5/2/7 to 8/5/8, each out of eight. Width reduction changes which constraints fail.
+
+\subsection{Site improves invariants at matched changed-rule totals}
+Moving D to the post-attention residual (E) raises complete count suites from 3/8/3 to 8/9/6. E retains every D pass and gains five, one, and three pairs. Both achieve identical changed-probe totals: 30/29/28 out of 32. Conditional denominators distinguish the reordered result: D scores 28/30 among evaluable comparisons, E 28/32. Unconditional counts preserve those failures.
+
+Distractor-bound items decline from 22/14/23 to 14/11/16, while exact target placement stays 32/32 throughout. D/E also retain all eight nullable suites in original and reordered versions; rewritten suites are five and six. The clearest local site benefit is thus broader constraint fidelity rather than higher changed-interval correctness.
+
+In original pair \texttt{confirm\_count\_04}, both models correctly bound \texttt{beam\_presets} to $[2,4]$ in arm a and $[3,5]$ in arm b. Their schemas otherwise agree except that D adds \texttt{maxItems: 2} to \texttt{gel\_codes} in both arms. That array is unrestricted. The unchanged six-element distractor probe is valid under either arm: D rejects it and E accepts it. This is D's only failing probe in each arm; E passes both complete suites. The example directly identifies an unintended restriction behind a changed-rule tie.
+
+\subsection{Old-task success does not transfer unchanged}
+On the ten earlier count pairs that Base passes in both wordings, A preserves none across both versions, B preserves three, D all ten, and E nine. D passes all 12 earlier count pairs in each wording, yet only two of 16 confirmation pairs across all three versions. The added distractor and new scenarios expose failures hidden by that old ranking.
+
+LoRA C passes 11/13/8 confirmation count suites and eight pairs across all three versions, versus A/B/D/E's 6/4/2/5. C changes update targets, parameterization, scaling, and biases together. Base itself varies sharply: 2/12/1 suites, with only one pair passing all versions. No adapted model retains that pair across all versions.
+
+\section{Conclusion}
+Adapter architecture changes both where constraints land and which unrelated restrictions appear. The post-attention narrow affine adapter improves complete-suite fidelity while matching its post-block counterpart on changed-rule totals. Activation removal and width reduction yield different, mixed error profiles. Multi-seed replications and other rule families would test how far the site effect generalizes. For generated validators, evaluate the requested rule change together with unchanged positive alternatives and aligned wording/order variants: strong discriminating-probe performance can coexist with harmful restrictions elsewhere.
+
+\section*{Limitations}
+The bottleneck-adapter approach itself has bounds. Every axis pays for its gains: removing SiLU repairs root-level bound placement without raising complete-pair counts; narrowing the width preserves target bounds while tightening restrictions on the unrestricted array; and although the site move brings the largest improvement, the best configuration still leaves 8, 7, and 10 of 16 count pairs unsatisfied across the three versions. At a comparable parameter budget, LoRA exceeded the pilot's adapter on joint success and matches or exceeds every adapter variant on the confirmation suites, so this adapter family's ceiling on the task lies below an available alternative. A plausible cause, briefly: a low-rank residual update attached to a frozen backbone can only modulate existing representations, so rule errors tied to the backbone's own task understanding remain out of reach. Finite probes establish tested decisions rather than schema equivalence, which is why executable scores and structural placement counts are reported side by side. Experimentally, each configuration has one seed and a validation-selected epoch, the confirmation set is small (24 pairs) with aligned rather than independent versions, and the earlier pilot's frozen scores measure reference-witness agreement where reference labels mismatched requirements.
+
+\section*{AI and Data Disclosure}
+All data are synthetic. Original generators were prepared with GPT-6 Luna assistance and deterministic substitution. There is no independently human-annotated test set, but the data were manually spot-checked for correctness. Reference schemas and probes are programmatically validated. Results use retained predictions and deterministic analysis; frozen protocols, model revision, prompts, generation settings, and per-item outcomes are archived on GitHub.\footnote{\url{https://github.com/Jianqu0817/NLP_FINAL_DATA}}

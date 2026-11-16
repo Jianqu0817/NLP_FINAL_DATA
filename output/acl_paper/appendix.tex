@@ -1,0 +1,18 @@
+\section{\Lang{Supplementary diagnostics}{补充诊断}}
+\label{app:diagnostics}
+
+\Lang{Table~\ref{tab:extra} reports two diagnostics for the count task and the complete nullable control. Every count version contains 16 pairs (32 generated schemas); every nullable version contains eight pairs. Within a cell, results follow original, reworded, and reordered inputs. The three measurements share examples and should not be pooled.}{表~\ref{tab:extra} 列出数量题的两项诊断以及可空性对照的完整通过数。数量题每个版本有 16 对（32 份生成的规则），可空性题有 8 对。每个单元格从左至右依次为原句、改写和换序；三个版本使用相同题目，不独立计数。}
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{@{}lccc@{}}\toprule
+& \Lang{Evaluable}{可执行} & \Lang{Extra bound}{多加界限} & \Lang{Nullable}{可空性}\\
+\midrule
+Base & 16/26/26 & 22/9/29 & 0/0/0\\
+A & 32/32/28 & 12/6/10 & 6/3/8\\
+B & 30/30/32 & 14/14/22 & 5/2/7\\
+C & 32/32/32 & 6/2/13 & 8/6/7\\
+D & 32/32/30 & 22/14/23 & 8/5/8\\
+E & 32/32/32 & 14/11/16 & 8/6/8\\
+\bottomrule\end{tabular}
+\caption{\Lang{Left: denominators for changed probes when both schemas can be evaluated (numerators in Table~\ref{tab:results}). Center: schemas assigning any length bound directly to the unrestricted array, out of 32. Right: nullable pairs passing the full suite, out of eight.}{左：两端规则都可执行时，变化探针的条件分母（分子见表~\ref{tab:results}）。中：32 份输出中，给不限长数组直接添加长度限制的份数。右：8 对可空性题中两端均通过全部探针的对数。}}\label{tab:extra}
+\end{table}

@@ -1,0 +1,87 @@
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.20it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.96it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 16, "total": 96, "seconds": 12.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 32, "total": 96, "seconds": 24.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 48, "total": 96, "seconds": 36.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 64, "total": 96, "seconds": 48.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 80, "total": 96, "seconds": 60.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_zero.jsonl", "done": 96, "total": 96, "seconds": 70.5}
+COMPLETE paired:base_zero 96 0 70.54
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.18it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.27it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.86it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 16, "total": 96, "seconds": 8.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 32, "total": 96, "seconds": 15.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 48, "total": 96, "seconds": 23.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 64, "total": 96, "seconds": 29.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 80, "total": 96, "seconds": 36.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/base_demo.jsonl", "done": 96, "total": 96, "seconds": 42.4}
+COMPLETE paired:base_demo 96 0 42.4
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.51it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.24it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 16, "total": 96, "seconds": 7.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 32, "total": 96, "seconds": 15.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 48, "total": 96, "seconds": 22.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 64, "total": 96, "seconds": 31.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 80, "total": 96, "seconds": 38.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/adapter.jsonl", "done": 96, "total": 96, "seconds": 43.7}
+COMPLETE paired:adapter 96 0 43.7
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.39it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.40it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.07it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 16, "total": 96, "seconds": 11.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 32, "total": 96, "seconds": 21.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 48, "total": 96, "seconds": 33.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 64, "total": 96, "seconds": 45.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 80, "total": 96, "seconds": 58.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/predictions/lora.jsonl", "done": 96, "total": 96, "seconds": 65.5}
+COMPLETE paired:lora 96 0 65.46
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.22it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.99it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 16, "total": 100, "seconds": 16.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 32, "total": 100, "seconds": 31.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 48, "total": 100, "seconds": 45.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 64, "total": 100, "seconds": 58.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 80, "total": 100, "seconds": 69.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 96, "total": 100, "seconds": 93.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/challenge_base_demo.jsonl", "done": 100, "total": 100, "seconds": 103.5}
+COMPLETE challenge:base_demo 100 0 103.53
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.31it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.42it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.09it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 16, "total": 580, "seconds": 20.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 32, "total": 580, "seconds": 42.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 48, "total": 580, "seconds": 65.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 64, "total": 580, "seconds": 87.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 80, "total": 580, "seconds": 105.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 96, "total": 580, "seconds": 124.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 112, "total": 580, "seconds": 142.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 128, "total": 580, "seconds": 151.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 144, "total": 580, "seconds": 161.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 160, "total": 580, "seconds": 175.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 176, "total": 580, "seconds": 189.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 192, "total": 580, "seconds": 204.1}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 208, "total": 580, "seconds": 218.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 224, "total": 580, "seconds": 232.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 240, "total": 580, "seconds": 257.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 256, "total": 580, "seconds": 276.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 272, "total": 580, "seconds": 288.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 288, "total": 580, "seconds": 300.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 304, "total": 580, "seconds": 322.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 320, "total": 580, "seconds": 342.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 336, "total": 580, "seconds": 363.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 352, "total": 580, "seconds": 383.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 368, "total": 580, "seconds": 411.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 384, "total": 580, "seconds": 588.6}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 400, "total": 580, "seconds": 763.3}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 416, "total": 580, "seconds": 780.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 432, "total": 580, "seconds": 805.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 448, "total": 580, "seconds": 820.8}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 464, "total": 580, "seconds": 836.5}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 480, "total": 580, "seconds": 857.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 496, "total": 580, "seconds": 898.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 512, "total": 580, "seconds": 938.7}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 528, "total": 580, "seconds": 958.9}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 544, "total": 580, "seconds": 983.2}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 560, "total": 580, "seconds": 1003.0}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 576, "total": 580, "seconds": 1023.4}
+{"event": "eval_progress", "file": "/root/gpufree-data/nlp_final/paired_study/original_control/test_base_demo.jsonl", "done": 580, "total": 580, "seconds": 1031.0}
+COMPLETE test:base_demo 580 3 1031.04
+ALL_DONE

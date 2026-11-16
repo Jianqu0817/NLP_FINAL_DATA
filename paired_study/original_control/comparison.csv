@@ -1,0 +1,33 @@
+split,track,condition,mode,n,format_success,schema_validity,schema_rule_evaluable,schema_suite_pass,data_accuracy,joint_success,truncated
+test,all,Base,strict,580,372,262,262,143,260,121,0
+test,all,Base,rewrapped,580,482,372,372,242,350,204,0
+test,requirements,Base,strict,500,372,262,262,143,260,121,0
+test,requirements,Base,rewrapped,500,402,292,292,162,286,140,0
+test,natural_meeting,Base,strict,80,0,0,0,0,0,0,0
+test,natural_meeting,Base,rewrapped,80,80,80,80,80,64,64,0
+test,all,Adapter,strict,580,550,545,545,213,454,209,0
+test,all,Adapter,rewrapped,580,550,545,545,213,454,209,0
+test,requirements,Adapter,strict,500,470,465,465,133,378,133,0
+test,requirements,Adapter,rewrapped,500,470,465,465,133,378,133,0
+test,natural_meeting,Adapter,strict,80,80,80,80,80,76,76,0
+test,natural_meeting,Adapter,rewrapped,80,80,80,80,80,76,76,0
+test,all,LoRA,strict,580,541,531,531,288,457,279,2
+test,all,LoRA,rewrapped,580,541,531,531,288,457,279,2
+test,requirements,LoRA,strict,500,461,451,451,208,381,203,2
+test,requirements,LoRA,rewrapped,500,461,451,451,208,381,203,2
+test,natural_meeting,LoRA,strict,80,80,80,80,80,76,76,0
+test,natural_meeting,LoRA,rewrapped,80,80,80,80,80,76,76,0
+test,all,Base + example,strict,580,468,418,418,168,265,126,3
+test,all,Base + example,rewrapped,580,468,418,418,168,265,126,3
+test,requirements,Base + example,strict,500,394,356,356,118,205,86,3
+test,requirements,Base + example,rewrapped,500,394,356,356,118,205,86,3
+test,natural_meeting,Base + example,strict,80,74,62,62,50,60,40,0
+test,natural_meeting,Base + example,rewrapped,80,74,62,62,50,60,40,0
+challenge,all,Base,strict,100,0,0,0,0,0,0,0
+challenge,all,Base,rewrapped,100,91,75,75,36,45,19,0
+challenge,all,Adapter,strict,100,90,90,90,31,52,17,0
+challenge,all,Adapter,rewrapped,100,90,90,90,31,52,17,0
+challenge,all,LoRA,strict,100,97,90,90,30,55,13,0
+challenge,all,LoRA,rewrapped,100,97,90,90,30,55,13,0
+challenge,all,Base + example,strict,100,86,66,66,13,41,3,0
+challenge,all,Base + example,rewrapped,100,86,66,66,13,41,3,0

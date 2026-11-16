@@ -1,0 +1,28 @@
+\newcommand{\ModelTable}{%
+\begin{table}[t]\centering\small
+\begin{tabular}{@{}llrr@{}}\toprule
+\Lang{ID}{组别} & \Lang{Update and site}{更新与位置} & \Lang{Params (M)}{参数（百万）} & \Lang{Epoch}{轮次} \\ \midrule
+Base & \Lang{Frozen backbone}{冻结基座} & 0 & -- \\
+A & \Lang{SiLU-64, block end}{SiLU-64，块末} & 11.891 & 1\\
+B & \Lang{Affine-64, block end}{仿射-64，块末} & 11.891 & 3\\
+C & \Lang{LoRA-16, attention}{LoRA-16，注意力} & 11.796 & 2\\
+D & \Lang{Affine-16, block end}{仿射-16，块末} & 3.042 & 3\\
+E & \Lang{Affine-16, after attention}{仿射-16，注意力后} & 3.042 & 2\\ \bottomrule
+\end{tabular}
+\caption{\Lang{Model conditions, trainable parameters, and validation-selected epochs. A:B changes the activation, B:D the width, and D:E the insertion site.}{各组的可训练参数量及验证集选中的轮次。A 与 B 对照激活函数，B 与 D 对照宽度，D 与 E 对照插入位置。}}\label{tab:models}
+\end{table}}
+\newcommand{\ResultsTable}{%
+\begin{table}[t]\centering\small
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+&\multicolumn{3}{c}{\Lang{Changed probe /32}{变化探针 /32}} &\multicolumn{3}{c}{\Lang{Full suite /16}{整对全通过 /16}}\\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+&\Lang{Orig.}{原句}&\Lang{Word.}{改写}&\Lang{Ord.}{换序}&\Lang{Orig.}{原句}&\Lang{Word.}{改写}&\Lang{Ord.}{换序}\\\midrule
+Base&14&26&25&2&12&1\\
+A&29&31&19&9&13&6\\
+B&29&30&30&8&8&5\\
+C&29&28&29&11&13&8\\
+D&30&29&28&3&8&3\\
+E&30&29&28&8&9&6\\\bottomrule
+\end{tabular}
+\caption{\Lang{Count bounds on the same 16 confirmation pairs in three presentations. Left: both schemas classify the discriminating instance correctly (two such instances per pair). Right: both schemas pass every probe, including unchanged controls. All pairs are retained.}{同一组 16 对数量题的三种表述。左：两端规则均正确判定区分性实例，每对有两个这样的实例。右：两端均通过全部探针，包括本应保持不变的对照。分母含全部题对。}}\label{tab:results}
+\end{table}}
